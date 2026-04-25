@@ -1,0 +1,33 @@
+#split-screen-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999; //Stay on top of everything
+    background: white;
+}
+
+.split-pane {
+    width: 50vw;
+    height: 100vh;
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    position: relative;
+    border-right: 2px solid black;
+}
+
+.inner-content {
+    width: 100vw; 
+    position: absolute;
+    top: 0;
+}
+
+#right-pane .inner-content {
+    left: -50vw; 
+}
+
+body.split-active {
+    overflow: hidden !important;
+}
